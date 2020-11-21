@@ -16,11 +16,11 @@ body {
     padding: 30px;
 }
 
-.left-side {
+.nav-left-side {
     display: flex;
 }
 
-.nav-wrapper > .left-side > div {
+.nav-wrapper > .nav-left-side > div {
     margin-right: 20px;
     font-size: 0.9em;
     text-transform: uppercase;
@@ -54,6 +54,44 @@ body {
     color: black !important;
 }
 
+/* footer styles */
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.footer-left-side {
+    display: flex;
+}
+
+.footer-wrapper > .footer-left-side > div {
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.footer-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.footer-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.footer-link-wrapper:hover {
+    border-bottom: 1px solid black;
+}
+
+.footer-link-wrapper a:hover {
+    color: black
+}
+
 /* portfolio styles */
 .portfolio-items-wrapper {
     display: grid;
@@ -80,9 +118,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: 90%;
     text-align: center;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .img-text-wrapper .subtitle {
@@ -94,6 +133,20 @@ body {
 .img-text-wrapper:hover .subtitle {
     font-weight: 600;
     color: lightsteelblue;
+}
+
+.img-text-wrapper .description {
+    transition: 0.5s;
+    font-weight: 400;
+    color: transparent;
+    padding-top: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.img-text-wrapper:hover .description {
+    font-weight: 400;
+    color: steelblue
 }
 
 .img-darken {
@@ -114,8 +167,44 @@ body {
 
 .profile-content-wrapper {
     padding: 30px;
+    padding-right: 60px;
 }
 
-.profile-content-wrapper h1 {
+.profile-content-wrapper h2 {
     color: lightsteelblue
+}
+
+.profile-content-wrapper p {
+    color: black;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Impressum styles */
+
+.single-column-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.policy-header-wrapper {
+    padding: 30px;
+}
+
+.policy-header-wrapper h2 {
+    color: lightsteelblue;
+    text-align: center;
+}
+
+.policy-content-wrapper {
+    padding: 30px;
+    padding-right: 60px;
+}
+
+.policy-content-wrapper p {
+    color: black;
+    text-align: justify;
+    line-height: 1.6;
+    padding-left: 10%;
+    padding-right: 5%;
 }
