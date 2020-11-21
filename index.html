@@ -2,11 +2,108 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Holz Fabrik</title>
+    <title>Holz Fabrik - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="placeholder">Test</div>
-    <h1>Hi There</h1>
+    <div class="container">
+        <div class="nav-wrapper">
+            
+            <div class="left-side">
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="index.html">Portfolio</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="kontakt.html">Kontakt</a>
+                </div>
+            </div>
+            
+            <div class="right-side">
+                <div class="brand">
+                    <div>HOLZ FABRIK KISSER</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="portfolio-items-wrapper">
+                
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image: url(images/portfolio1.jpg);">
+                    </div>
+                    <div class="img-text-wrapper">
+                        <div class="subtitle">
+                            Schneidebretter
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image: url(images/portfolio2.jpg);">
+                    </div>
+                    <div class="img-text-wrapper">
+                        <div class="subtitle">
+                            Schachbretter
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image: url(images/portfolio3.jpg);">
+                    </div>
+                    <div class="img-text-wrapper">
+                        <div class="subtitle">
+                            Möbel
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image: url(images/portfolio4.jpg);">
+                    </div>
+                    <div class="img-text-wrapper">
+                        <div class="subtitle">
+                            Kunstwerke
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image: url(images/portfolio5.jpg);">
+                    </div>
+                    <div class="img-text-wrapper">
+                        <div class="subtitle">
+                            Küchenutensilien
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image: url(images/portfolio6.jpg);">
+                    </div>
+                    <div class="img-text-wrapper">
+                        <div class="subtitle">
+                            Weiteres ...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </body>
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+            portfolioItem.childNodes[1].classList.add('img-darken');
+        })
+
+        portfolioItem.addEventListener('mouseout', () => {
+            portfolioItem.childNodes[1].classList.remove('img-darken');
+        })
+    })
+</script>
 </html>
