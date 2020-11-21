@@ -2,6 +2,7 @@
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0px;
+    background-color: #202020;
 }
 
 .container {
@@ -18,6 +19,7 @@ body {
 
 .nav-left-side {
     display: flex;
+    margin-left: 45%;
 }
 
 .nav-wrapper > .nav-left-side > div {
@@ -39,19 +41,33 @@ body {
 }
 
 .nav-link-wrapper:hover {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #b73225 !important;
 }
 
 .nav-link-wrapper a:hover {
-    color: black
+    color: #b73225 !important
 }
 
 .active-nav-link {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
 }
 
 .active-nav-link a {
-    color: black !important;
+    color: white !important;
+}
+
+.nav-right-side {
+    display: flex;
+}
+
+.nav-wrapper > .nav-right-side > div {
+    margin-left: 20px;
+    font-size: 0.9em;
+}
+
+.brand {
+    color: white;
+    text-transform: uppercase;
 }
 
 /* footer styles */
@@ -85,11 +101,11 @@ body {
 }
 
 .footer-link-wrapper:hover {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #b73225;
 }
 
 .footer-link-wrapper a:hover {
-    color: black
+    color: #b73225
 }
 
 /* portfolio styles */
