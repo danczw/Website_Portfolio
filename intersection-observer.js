@@ -1,8 +1,31 @@
-const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
 const headerSection = document.querySelector('.header');
+const welcomeMenu = document.querySelector('.welcomeMenu');
+const portfolioMenu = document.querySelector('.portfolioMenu');
+const kontaktMenu = document.querySelector('.kontaktMenu');
 const welcomeSection = document.querySelector('.welcome-wrapper');
+const portfolioSection = document.querySelector('.portfolio-items-wrapper');
+const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
 const faders = document.querySelectorAll('.fade-in');
 const sliders = document.querySelectorAll('.slide-in');
+const kontaktSection = document.querySelector('.kontakt-wrapper')
+
+// nav bar actions
+const contentWrapperOptions = {
+    rootMargin: '-300px 0px 0px 0px'
+};
+
+const contentWrapperObserver = new IntersectionObserver(function(
+    entries, contentWrapperObserver) {
+        entries.forEach(entry => {
+            if(!entry.isIntersecting) {
+                headerSection.classList.add('header-scroll')
+            } else {
+                headerSection.classList.remove('header-scroll')
+            };
+        })
+    }, contentWrapperOptions);
+
+contentWrapperObserver.observe(welcomeSection);
 
 // portfolio items darken action
 const portfolioItemOptions = {
@@ -36,28 +59,10 @@ portfolioItems.forEach(portfolioItem => {
     portfolioItemObserver.observe(portfolioItem)
 });
 
-// nav bar actions
-const contentWrapperOptions = {
-    rootMargin: '-300px 0px 0px 0px'
-};
-
-const contentWrapperObserver = new IntersectionObserver(function(
-    entries, contentWrapperObserver) {
-        entries.forEach(entry => {
-            if(!entry.isIntersecting) {
-                headerSection.classList.add('header-scroll')
-            } else {
-                headerSection.classList.remove('header-scroll')
-            };
-        })
-    }, contentWrapperOptions);
-
-contentWrapperObserver.observe(welcomeSection);
-
 // faders action
 const appearOptions = {
     threshold: 0,
-    rootMargin: '0px 0px -150px 0px'
+    rootMargin: '-150px 0px -150px 0px'
 };
 
 const appearOnScroll = new IntersectionObserver(function(
@@ -82,21 +87,52 @@ sliders.forEach(slider => {
 });
 
 // active nav action
-// const welcomeMenu = document.querySelector('.welcomeMenu');
+const navOptions = {
+    threshhold: 0,
+    rootMargin: '-300px 0px 0px 0px'
+};
 
-// const navOptions = {
-//     threshold: 0,
-// };
+const welcomeNavActive = new IntersectionObserver(function(
+    entries, welcomeNavActive) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                welcomeMenu.classList.add('active-nav-link');
+                portfolioMenu.classList.remove('active-nav-link');
+                kontaktMenu.classList.remove('active-nav-link');
+            } else {
+                welcomeMenu.classList.remove('active-nav-link');
+            }
+        });
+    }, navOptions);
 
-// const navActive = new IntersectionObserver(function(
-//     entries, navActive) {
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 console.log('active');
-//             } else {
-//                 console.log('not active');;
-//             }
-//         });
-//     }, navOptions);
+welcomeNavActive.observe(welcomeSection)
 
-// navActive.observe(welcomeSection)
+const portfolioNavActive = new IntersectionObserver(function(
+    entries, welcomeNavActive) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                portfolioMenu.classList.add('active-nav-link');
+                welcomeMenu.classList.remove('active-nav-link');
+                kontaktMenu.classList.remove('active-nav-link');
+            } else {
+                portfolioMenu.classList.remove('active-nav-link');
+            }
+        });
+    }, navOptions);
+
+portfolioNavActive.observe(portfolioSection)
+
+const kontaktNavActive = new IntersectionObserver(function(
+    entries, welcomeNavActive) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                kontaktMenu.classList.add('active-nav-link');
+                portfolioMenu.classList.remove('active-nav-link');
+                welcomeMenu.classList.remove('active-nav-link');
+            } else {
+                kontaktMenu.classList.remove('active-nav-link');
+            }
+        });
+    }, navOptions);
+
+kontaktNavActive.observe(kontaktSection)
