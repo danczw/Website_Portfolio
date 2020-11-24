@@ -58,7 +58,7 @@ a:hover {color: #b73225;} /* mouse over link */
     content: "";
     position: absolute;
     height: 5px;
-    border-top: 1px solid #8a8a8a;
+    border-top: 1px solid #ae7c54;
     border-bottom: 1px solid #ae7c54;
     top: 0;
     width: 300px;
@@ -117,7 +117,7 @@ a:hover {color: #b73225;} /* mouse over link */
 
 .header-scroll {
     background-color: #11353d;
-    box-shadow: 0 3px 20px rgba(33, 132, 144, 0.3);
+    box-shadow: 0 3px 20px rgba(174, 124, 84, 0.6);
 }
 
 .nav-left-side {

@@ -11,7 +11,7 @@ const kontaktSection = document.querySelector('.kontakt-wrapper')
 
 // nav bar actions
 const contentWrapperOptions = {
-    rootMargin: '-300px 0px 0px 0px'
+    threshold: 0.5
 };
 
 const contentWrapperObserver = new IntersectionObserver(function(
