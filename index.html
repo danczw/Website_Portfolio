@@ -9,28 +9,36 @@
 </head>
 <body>
     <div class="container">
-        <div class="nav-wrapper">
-            
-            <div class="nav-left-side">
-                <div class="nav-link-wrapper active-nav-link">
-                    <a href="index.html">Portfolio</a>
+        <div class="header">
+            <div class="nav-wrapper">
+                <div class="nav-left-side">
                 </div>
-                <div class="nav-link-wrapper">
-                    <a href="kontakt.html">Kontakt</a>
+
+                <div class="nav-mid-side">
+                    <div class="nav-link-wrapper welcomeMenu">
+                        <a href="#willkommen">Willkommen</a>
+                    </div>
+                    <div class="nav-link-wrapper portfolioMenu">
+                        <a href="#portfolio">Portfolio</a>
+                    </div>
+                    <div class="nav-link-wrapper kontaktMenu">
+                        <a href="#kontakt">Kontakt</a>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="right-side">
-                <div class="brand">
-                    <div>holz fabrik</div>
+                
+                <div class="nav-right-side">
+                    <img class="nav-logo" src="logos/logo.png">
                 </div>
             </div>
         </div>
-
-        <div class="content-wrapper">
+        
+        <div class="welcome-wrapper" id="willkommen">
+            <img class="welcomeLogo" src="logos/logo.png">
+        </div>
+        <div class="content-wrapper" id="portfolio">      
             <div class="portfolio-items-wrapper">
-                
-                <div class="portfolio-item-wrapper">
+                <p class="section-title fancy slide-in from-right"><span>Portfolio</span></p>
+                <div class="portfolio-item-wrapper slide-in from-right">
                     <div class="portfolio-img-background" style="background-image: url(images/portfolio1.jpg);">
                     </div>
                     <div class="img-text-wrapper">
@@ -43,7 +51,9 @@
                     </div>
                 </div>
 
-                <div class="portfolio-item-wrapper">
+                <div class="portfolio-item-padder"></div>
+
+                <div class="portfolio-item-wrapper slide-in from-left">
                     <div class="portfolio-img-background" style="background-image: url(images/portfolio2.jpg);">
                     </div>
                     <div class="img-text-wrapper">
@@ -56,7 +66,9 @@
                     </div>
                 </div>
 
-                <div class="portfolio-item-wrapper">
+                <div class="portfolio-item-padder"></div>
+
+                <div class="portfolio-item-wrapper slide-in from-right">
                     <div class="portfolio-img-background" style="background-image: url(images/portfolio3.jpg);">
                     </div>
                     <div class="img-text-wrapper">
@@ -69,7 +81,9 @@
                     </div>
                 </div>
 
-                <div class="portfolio-item-wrapper">
+                <div class="portfolio-item-padder"></div>
+
+                <div class="portfolio-item-wrapper slide-in from-left">
                     <div class="portfolio-img-background" style="background-image: url(images/portfolio4.jpg);">
                     </div>
                     <div class="img-text-wrapper">
@@ -82,7 +96,9 @@
                     </div>
                 </div>
 
-                <div class="portfolio-item-wrapper">
+                <div class="portfolio-item-padder"></div>
+
+                <div class="portfolio-item-wrapper slide-in from-right">
                     <div class="portfolio-img-background" style="background-image: url(images/portfolio5.jpg);">
                     </div>
                     <div class="img-text-wrapper">
@@ -95,7 +111,9 @@
                     </div>
                 </div>
 
-                <div class="portfolio-item-wrapper">
+                <div class="portfolio-item-padder"></div>
+
+                <div class="portfolio-item-wrapper slide-in from-left">
                     <div class="portfolio-img-background" style="background-image: url(images/portfolio6.jpg);">
                     </div>
                     <div class="img-text-wrapper">
@@ -106,6 +124,25 @@
                             Verschiedenste Anfertigungen aus hochwertigem Holz nach Absprache.
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="kontakt-wrapper fade-in" id="kontakt">  
+            <p class="section-title fancy"><span>Kontakt</span></p>           
+            <div class="two-column-wrapper">
+                <div class="profile-image-wrapper">
+                    <img src="images/me.jpg">
+                </div>
+                <div class="profile-content-wrapper">
+                    <h2>Vielen Dank für den Besuch meiner Webseite.</h2>
+                    <p>Seit über einem Jahr fertige ich nebenberuflich verschiedenste Gebrauchsgegenstände aus Holz.
+                        Dabei verwende ich stets nur persönlich ausgewähltes Holz aus höchster Qualität.
+                        Einen Eindruck meiner bisherigen Arbeiten erhalten Sie in meinem <a href="#portfolio">Portfolio</a>.</p>
+                    <p>Bei Interesse melden Sie sich gerne direkt bei mir, ich bin per Mail erreichbar unter <a href="mailto:MailAdress@mail.com">MailAdress@mail.com</a>.
+                        Hinterlassen Sie Ihre Telefonnummer und ich melde mich umgehend zurück.</p>
+                    <p>Ich freue mich auf Ihre Anfrage,</p>
+                    <p>Ihr M. K</p>
                 </div>
             </div>
         </div>
@@ -127,17 +164,5 @@
 
     </div>
 </body>
-
-<script>
-    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
-    portfolioItems.forEach(portfolioItem => {
-        portfolioItem.addEventListener('mouseover', () => {
-            portfolioItem.childNodes[1].classList.add('img-darken');
-        })
-
-        portfolioItem.addEventListener('mouseout', () => {
-            portfolioItem.childNodes[1].classList.remove('img-darken');
-        })
-    })
-</script>
+<script src="intersection-observer.js" defer></script>
 </html>
