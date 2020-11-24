@@ -1,8 +1,8 @@
 /* master styles */
 /* colors:
- ligh blue #218490
- teal #11353d
- brown #ae7c54
+ ligh blue 218490
+ teal 11353d
+ brown ae7c54
   */
 
 html {
@@ -12,12 +12,12 @@ html {
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0px;
-    background-color: #11353d;
+    background-color: #12232e;
     overflow-x: hidden;
 }
 
-a:link {color: #ae7c54;} /* unvisited link */
-a:visited {color: #ae7c54;} /* visited link */
+a:link {color: #c06b25;} /* unvisited link */
+a:visited {color: #c06b25;} /* visited link */
 a:hover {color: #b73225;} /* mouse over link */
 
 .container {
@@ -50,7 +50,8 @@ a:hover {color: #b73225;} /* mouse over link */
 
 .fancy span {
     display: inline-block;
-    position: relative;  
+    position: relative;
+    font-size: 22px;
   }
 
 .fancy span:before,
@@ -58,18 +59,18 @@ a:hover {color: #b73225;} /* mouse over link */
     content: "";
     position: absolute;
     height: 5px;
-    border-top: 1px solid #ae7c54;
-    border-bottom: 1px solid #ae7c54;
+    border-top: 1px solid #c06b25;
+    border-bottom: 1px solid #c06b25;
     top: 0;
-    width: 300px;
+    width: 450px;
   }
   
 .fancy span:before {
-    right: 100%;
+    right: 110%;
     margin-right: 15px;
   }
 .fancy span:after {
-    left: 100%;
+    left: 110%;
     margin-left: 15px;
   }
 
@@ -104,65 +105,83 @@ a:hover {color: #b73225;} /* mouse over link */
     right: 0;
     z-index: 999;
     grid-template-columns: 1fr;
-    background-color: #11353d;
+    background-color: #212324;
     transition: 250ms ease-in;
 }
 
 .nav-wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
-    padding: 30px;
-    padding-bottom: 8px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(192, 107, 37, 0.6);
 }
 
-.header-scroll {
-    background-color: #11353d;
-    box-shadow: 0 3px 20px rgba(174, 124, 84, 0.6);
-}
+/* .header-scroll {
+    background-color: #212324;
+    box-shadow: 0 3px 20px rgba(174, 124, 84, 0.8);
+} */
 
 .nav-left-side {
     display: flex;
-    position: center;
-    margin-left: 5%;
+    float: right;
+    margin-left: auto;
+    margin-right: 0%;
 }
 
 .nav-wrapper > .nav-left-side > div {
-    margin-right: 20px;
+    font-size: 0.9em;
+}
+
+.nav-mid-side {
+    display: flex;
+    position: center;
+    margin: auto;
+}
+
+.nav-wrapper > .nav-mid-side > div {
+    /* padding-left: 20px;
+    padding-right: 20px; */
     font-size: 0.9em;
     text-transform: uppercase;
 }
 
 .nav-link-wrapper {
     height: 22px;
+    margin-left: 15px;
+    margin-right: 15px;
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.5s;
 }
 
 .nav-link-wrapper a {
-    color: #8a8a8a;
+    color: white;
     text-decoration: none;
     transition: color 0.5s;
+    justify-content: space-around;
 }
 
 .nav-link-wrapper:hover {
-    border-bottom: 1px solid #ae7c54 !important;
+    border-bottom: 1px solid #c06b25 !important;
 }
 
 .nav-link-wrapper a:hover {
-    color: #ae7c54 !important
+    color: #c06b25 !important
 }
 
 .active-nav-link {
-    border-bottom: 1px solid #218490;
-    color: white !important;
+    border-bottom: 1px solid #c06b25;
+    color: #c06b25 !important;
 }
 
 .nav-right-side {
     display: flex;
+    float: right;
+    margin-left: auto;
+    margin-right: 0%;
 }
 
 .nav-wrapper > .nav-right-side > div {
-    margin-left: 20px;
     font-size: 0.9em;
 }
 
@@ -170,16 +189,6 @@ a:hover {color: #b73225;} /* mouse over link */
     color: white;
     text-transform: uppercase;
     padding-right: 20px;
-}
-
-.nav-line {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 5px;
-}
-
-.nav-line hr {
-    border-top: 1px solid #ae7c54;
 }
 
 /* welcome styles */
@@ -204,7 +213,7 @@ a:hover {color: #b73225;} /* mouse over link */
 }
 
 .welcome-text-wrapper h2 {
-    color: #ae7c54;
+    color: #c06b25;
     font-weight: 900;
     text-transform: uppercase;
     line-height: 1.6;
@@ -216,7 +225,7 @@ a:hover {color: #b73225;} /* mouse over link */
 .portfolio-items-wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    background-color: #11353d;
+    background-color: transparent;
     padding-top: 10px;
     padding-bottom: 100px;
 }
@@ -373,9 +382,9 @@ a:hover {color: #b73225;} /* mouse over link */
 }
 
 .footer-link-wrapper:hover {
-    border-bottom: 1px solid #ae7c54;
+    border-bottom: 1px solid #c06b25;
 }
 
 .footer-link-wrapper a:hover {
-    color: #ae7c54
+    color: #c06b25
 }

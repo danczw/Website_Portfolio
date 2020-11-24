@@ -10,22 +10,22 @@ const sliders = document.querySelectorAll('.slide-in');
 const kontaktSection = document.querySelector('.kontakt-wrapper')
 
 // nav bar actions
-const contentWrapperOptions = {
-    threshold: 0.5
-};
+// const contentWrapperOptions = {
+//     threshold: 0.5
+// };
 
-const contentWrapperObserver = new IntersectionObserver(function(
-    entries, contentWrapperObserver) {
-        entries.forEach(entry => {
-            if(!entry.isIntersecting) {
-                headerSection.classList.add('header-scroll')
-            } else {
-                headerSection.classList.remove('header-scroll')
-            };
-        })
-    }, contentWrapperOptions);
+// const contentWrapperObserver = new IntersectionObserver(function(
+//     entries, contentWrapperObserver) {
+//         entries.forEach(entry => {
+//             if(!entry.isIntersecting) {
+//                 headerSection.classList.add('header-scroll')
+//             } else {
+//                 headerSection.classList.remove('header-scroll')
+//             };
+//         })
+//     }, contentWrapperOptions);
 
-contentWrapperObserver.observe(welcomeSection);
+// contentWrapperObserver.observe(welcomeSection);
 
 // portfolio items darken action
 const portfolioItemOptions = {
