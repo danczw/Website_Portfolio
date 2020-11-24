@@ -178,47 +178,30 @@ a:hover {color: #b73225;} /* mouse over link */
     display: flex;
     float: right;
     margin-left: auto;
-    margin-right: 0%;
+    margin-right: 20px;
 }
 
 .nav-wrapper > .nav-right-side > div {
     font-size: 0.9em;
 }
 
-.brand {
-    color: white;
-    text-transform: uppercase;
-    padding-right: 20px;
+.nav-logo {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
 }
 
 /* welcome styles */
 .welcome-wrapper {
-    margin-top: 100px;
+    margin-top: 150px;
     display: grid;
     grid-template-columns: 1fr;
 }
 
-.welcome-text-wrapper {
-    margin-top: 80px;
-    padding-bottom: 100px;
-    padding-left: 20%;
-    padding-right: 20%;
-}
-
-.welcome-text-wrapper p {
-    color: white;
-    line-height: 1.6;
-    text-align: justify;
-    padding-bottom: 100px;
-}
-
-.welcome-text-wrapper h2 {
-    color: #c06b25;
-    font-weight: 900;
-    text-transform: uppercase;
-    line-height: 1.6;
-    text-align: justify;
-    padding-bottom: 200px;
+.welcomeLogo {
+    width: 600px;
+    height: 600px;
+    margin: auto;
 }
 
 /* portfolio styles */
@@ -332,6 +315,7 @@ a:hover {color: #b73225;} /* mouse over link */
 
 .policy-header-wrapper {
     padding: 30px;
+    margin-top: 100px;
 }
 
 .policy-header-wrapper h2 {
@@ -357,6 +341,7 @@ a:hover {color: #b73225;} /* mouse over link */
     display: flex;
     justify-content: space-between;
     padding: 50px;
+    color: #8a8a8a;
 }
 
 .footer-left-side {
