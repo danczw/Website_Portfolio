@@ -88,8 +88,8 @@ sliders.forEach(slider => {
 
 // active nav action
 const navOptions = {
-    threshhold: 0,
-    rootMargin: '-300px 0px 0px 0px'
+    threshold: 0.2,
+    rootMargin: '0px 0px 0px 0px'
 };
 
 const welcomeNavActive = new IntersectionObserver(function(
@@ -108,7 +108,7 @@ const welcomeNavActive = new IntersectionObserver(function(
 welcomeNavActive.observe(welcomeSection)
 
 const portfolioNavActive = new IntersectionObserver(function(
-    entries, welcomeNavActive) {
+    entries, portfolioNavActive) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 portfolioMenu.classList.add('active-nav-link');
@@ -123,7 +123,7 @@ const portfolioNavActive = new IntersectionObserver(function(
 portfolioNavActive.observe(portfolioSection)
 
 const kontaktNavActive = new IntersectionObserver(function(
-    entries, welcomeNavActive) {
+    entries, kontaktNavActive) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 kontaktMenu.classList.add('active-nav-link');

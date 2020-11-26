@@ -45,7 +45,7 @@ a:hover {color: #b73225;} /* mouse over link */
     text-align: center;
     width: 100%;
     padding-bottom: 20px;
-    padding-top: 100px;
+    padding-top: 20px;
   }
 
 .fancy span {
@@ -107,6 +107,7 @@ a:hover {color: #b73225;} /* mouse over link */
     grid-template-columns: 1fr;
     background-color: #212324;
     transition: 250ms ease-in;
+    border-bottom: 1px solid rgba(192, 107, 37, 0.6);
 }
 
 .nav-wrapper {
@@ -140,8 +141,6 @@ a:hover {color: #b73225;} /* mouse over link */
 }
 
 .nav-wrapper > .nav-mid-side > div {
-    /* padding-left: 20px;
-    padding-right: 20px; */
     font-size: 0.9em;
     text-transform: uppercase;
 }
@@ -193,9 +192,14 @@ a:hover {color: #b73225;} /* mouse over link */
 
 /* welcome styles */
 .welcome-wrapper {
-    margin-top: 150px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    height: 800px;
     display: grid;
     grid-template-columns: 1fr;
+    background-image: linear-gradient(to left, 
+        rgba(18,35,46, 0.75), rgba(18,35,46, 0.1), rgba(18,35,46, 0.1), rgba(18,35,46, 0.75)),
+        url("images/background.jpg");
 }
 
 .welcomeLogo {
@@ -209,7 +213,6 @@ a:hover {color: #b73225;} /* mouse over link */
     display: grid;
     grid-template-columns: 1fr;
     background-color: transparent;
-    padding-top: 10px;
     padding-bottom: 100px;
 }
 
