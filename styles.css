@@ -14,6 +14,11 @@ body {
     margin: 0px;
     background-color: #12232e;
     overflow-x: hidden;
+    background-image: linear-gradient(to left, 
+        rgba(18,35,46, 0.75), rgba(18,35,46, 0.1), rgba(18,35,46, 0.1), rgba(18,35,46, 0.75)),
+        url("images/background.jpg");
+    background-size: 100%;
+    background-repeat: repeat-y
 }
 
 a:link {color: #c06b25;} /* unvisited link */
@@ -196,10 +201,7 @@ a:hover {color: #b73225;} /* mouse over link */
     margin-bottom: 80px;
     height: 800px;
     display: grid;
-    grid-template-columns: 1fr;
-    background-image: linear-gradient(to left, 
-        rgba(18,35,46, 0.75), rgba(18,35,46, 0.1), rgba(18,35,46, 0.1), rgba(18,35,46, 0.75)),
-        url("images/background.jpg");
+    grid-template-columns: 1fr
 }
 
 .welcomeLogo {
@@ -232,6 +234,7 @@ a:hover {color: #b73225;} /* mouse over link */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    box-shadow: 0 1px 20px  #c06b25 inset
 }
 
 .img-text-wrapper {
